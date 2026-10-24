@@ -1,0 +1,63 @@
+<svg width="1600" height="1200" viewBox="0 0 1600 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="1200" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#120B2F"/>
+      <stop offset="0.5" stop-color="#2D1B4E"/>
+      <stop offset="1" stop-color="#0A0818"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(420 260) rotate(90) scale(420 520)">
+      <stop stop-color="#FFB7E5" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#FFB7E5" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1220 810) rotate(90) scale(460 520)">
+      <stop stop-color="#7DE2FF" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#7DE2FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow3" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(850 470) rotate(90) scale(340 420)">
+      <stop stop-color="#FFE48A" stop-opacity="0.48"/>
+      <stop offset="1" stop-color="#FFE48A" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1600" height="1200" fill="url(#bg)"/>
+  <rect width="1600" height="1200" fill="url(#glow1)"/>
+  <rect width="1600" height="1200" fill="url(#glow2)"/>
+  <rect width="1600" height="1200" fill="url(#glow3)"/>
+
+  <g opacity="0.8">
+    <circle cx="160" cy="150" r="5" fill="#FFD166"/>
+    <circle cx="240" cy="250" r="7" fill="#FF8FAB"/>
+    <circle cx="360" cy="170" r="6" fill="#7DE2FF"/>
+    <circle cx="510" cy="210" r="8" fill="#B9FBC0"/>
+    <circle cx="680" cy="130" r="6" fill="#FFD166"/>
+    <circle cx="840" cy="210" r="7" fill="#C5A3FF"/>
+    <circle cx="960" cy="120" r="6" fill="#FFB8A3"/>
+    <circle cx="1120" cy="210" r="8" fill="#7DE2FF"/>
+    <circle cx="1300" cy="150" r="6" fill="#B9FBC0"/>
+    <circle cx="1430" cy="240" r="7" fill="#FFD166"/>
+
+    <circle cx="150" cy="500" r="8" fill="#C5A3FF"/>
+    <circle cx="320" cy="620" r="7" fill="#FF8FAB"/>
+    <circle cx="500" cy="540" r="6" fill="#FFD166"/>
+    <circle cx="720" cy="660" r="8" fill="#7DE2FF"/>
+    <circle cx="890" cy="560" r="7" fill="#B9FBC0"/>
+    <circle cx="1100" cy="640" r="8" fill="#FFB8A3"/>
+    <circle cx="1280" cy="520" r="7" fill="#FFD166"/>
+    <circle cx="1460" cy="610" r="6" fill="#7DE2FF"/>
+
+    <circle cx="160" cy="940" r="7" fill="#FF8FAB"/>
+    <circle cx="340" cy="1010" r="8" fill="#FFD166"/>
+    <circle cx="560" cy="910" r="6" fill="#B9FBC0"/>
+    <circle cx="760" cy="1020" r="7" fill="#7DE2FF"/>
+    <circle cx="930" cy="980" r="8" fill="#FF8FAB"/>
+    <circle cx="1180" cy="930" r="7" fill="#FFD166"/>
+    <circle cx="1360" cy="1010" r="6" fill="#C5A3FF"/>
+    <circle cx="1490" cy="930" r="5" fill="#B9FBC0"/>
+  </g>
+
+  <g opacity="0.32" stroke="#FBE7FF" stroke-width="2">
+    <path d="M70 260C260 190 350 140 500 190C620 230 720 320 860 300C980 282 1080 160 1220 180C1360 200 1460 290 1550 260"/>
+    <path d="M40 760C180 700 330 650 470 690C620 730 760 820 930 810C1090 800 1180 680 1330 700C1430 710 1505 760 1560 820"/>
+    <path d="M120 1020C260 960 400 930 520 980C630 1025 760 1050 900 1030C1060 1008 1190 900 1320 920C1420 935 1495 980 1560 1040"/>
+  </g>
+</svg>
