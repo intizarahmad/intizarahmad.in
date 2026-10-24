@@ -1303,57 +1303,87 @@ audio {
 }
 @-webkit-keyframes balloons_rotate_one {
 	0% {
-		-webkit-transform: rotate(30deg);
+		-webkit-transform: rotate(30deg) translateY(0px);
+	}
+	25% {
+		-webkit-transform: rotate(12deg) translateY(-10px);
 	}
 	50% {
-		-webkit-transform: rotate(-30deg);
+		-webkit-transform: rotate(-30deg) translateY(-18px);
+	}
+	75% {
+		-webkit-transform: rotate(-12deg) translateY(-8px);
 	}
 	100% {
-		-webkit-transform: rotate(30deg);
+		-webkit-transform: rotate(30deg) translateY(0px);
 	}
 }
 @-moz-keyframes balloons_rotate_one {
 	0% {
-		-moz-transform: rotate(30deg);
+		-moz-transform: rotate(30deg) translateY(0px);
+	}
+	25% {
+		-moz-transform: rotate(12deg) translateY(-10px);
 	}
 	50% {
-		-moz-transform: rotate(-30deg);
+		-moz-transform: rotate(-30deg) translateY(-18px);
+	}
+	75% {
+		-moz-transform: rotate(-12deg) translateY(-8px);
 	}
 	100% {
-		-moz-transform: rotate(30deg);
+		-moz-transform: rotate(30deg) translateY(0px);
 	}
 }
 @-o-keyframes balloons_rotate_one {
 	0% {
-		-o-transform: rotate(30deg);
+		-o-transform: rotate(30deg) translateY(0px);
+	}
+	25% {
+		-o-transform: rotate(12deg) translateY(-10px);
 	}
 	50% {
-		-o-transform: rotate(-30deg);
+		-o-transform: rotate(-30deg) translateY(-18px);
+	}
+	75% {
+		-o-transform: rotate(-12deg) translateY(-8px);
 	}
 	100% {
-		-o-transform: rotate(30deg);
+		-o-transform: rotate(30deg) translateY(0px);
 	}
 }
 @-ms-keyframes balloons_rotate_one {
 	0% {
-		-ms-transform: rotate(30deg);
+		-ms-transform: rotate(30deg) translateY(0px);
+	}
+	25% {
+		-ms-transform: rotate(12deg) translateY(-10px);
 	}
 	50% {
-		-ms-transform: rotate(-30deg);
+		-ms-transform: rotate(-30deg) translateY(-18px);
+	}
+	75% {
+		-ms-transform: rotate(-12deg) translateY(-8px);
 	}
 	100% {
-		-ms-transform: rotate(30deg);
+		-ms-transform: rotate(30deg) translateY(0px);
 	}
 }
 @keyframes balloons_rotate_one {
 	0% {
-		transform: rotate(30deg);
+		transform: rotate(30deg) translateY(0px);
+	}
+	25% {
+		transform: rotate(12deg) translateY(-10px);
 	}
 	50% {
-		transform: rotate(-30deg);
+		transform: rotate(-30deg) translateY(-18px);
+	}
+	75% {
+		transform: rotate(-12deg) translateY(-8px);
 	}
 	100% {
-		transform: rotate(30deg);
+		transform: rotate(30deg) translateY(0px);
 	}
 }
 .balloons-rotate-behaviour-two {
@@ -1370,57 +1400,87 @@ audio {
 }
 @-webkit-keyframes balloons_rotate_two {
 	0% {
-		-webkit-transform: rotate(-20deg);
+		-webkit-transform: rotate(-20deg) translateY(0px);
+	}
+	25% {
+		-webkit-transform: rotate(-8deg) translateY(-12px);
 	}
 	50% {
-		-webkit-transform: rotate(20deg);
+		-webkit-transform: rotate(20deg) translateY(-20px);
+	}
+	75% {
+		-webkit-transform: rotate(8deg) translateY(-10px);
 	}
 	100% {
-		-webkit-transform: rotate(-20deg);
+		-webkit-transform: rotate(-20deg) translateY(0px);
 	}
 }
 @-moz-keyframes balloons_rotate_two {
 	0% {
-		-moz-transform: rotate(-20deg);
+		-moz-transform: rotate(-20deg) translateY(0px);
+	}
+	25% {
+		-moz-transform: rotate(-8deg) translateY(-12px);
 	}
 	50% {
-		-moz-transform: rotate(20deg);
+		-moz-transform: rotate(20deg) translateY(-20px);
+	}
+	75% {
+		-moz-transform: rotate(8deg) translateY(-10px);
 	}
 	100% {
-		-moz-transform: rotate(-20deg);
+		-moz-transform: rotate(-20deg) translateY(0px);
 	}
 }
 @-o-keyframes balloons_rotate_two {
 	0% {
-		-o-transform: rotate(-20deg);
+		-o-transform: rotate(-20deg) translateY(0px);
+	}
+	25% {
+		-o-transform: rotate(-8deg) translateY(-12px);
 	}
 	50% {
-		-o-transform: rotate(20deg);
+		-o-transform: rotate(20deg) translateY(-20px);
+	}
+	75% {
+		-o-transform: rotate(8deg) translateY(-10px);
 	}
 	100% {
-		-o-transform: rotate(-20deg);
+		-o-transform: rotate(-20deg) translateY(0px);
 	}
 }
 @-ms-keyframes balloons_rotate_two {
 	0% {
-		-ms-transform: rotate(-20deg);
+		-ms-transform: rotate(-20deg) translateY(0px);
+	}
+	25% {
+		-ms-transform: rotate(-8deg) translateY(-12px);
 	}
 	50% {
-		-ms-transform: rotate(20deg);
+		-ms-transform: rotate(20deg) translateY(-20px);
+	}
+	75% {
+		-ms-transform: rotate(8deg) translateY(-10px);
 	}
 	100% {
-		-ms-transform: rotate(-20deg);
+		-ms-transform: rotate(-20deg) translateY(0px);
 	}
 }
 @keyframes balloons_rotate_two {
 	0% {
-		transform: rotate(-20deg);
+		transform: rotate(-20deg) translateY(0px);
+	}
+	25% {
+		transform: rotate(-8deg) translateY(-12px);
 	}
 	50% {
-		transform: rotate(20deg);
+		transform: rotate(20deg) translateY(-20px);
+	}
+	75% {
+		transform: rotate(8deg) translateY(-10px);
 	}
 	100% {
-		transform: rotate(-20deg);
+		transform: rotate(-20deg) translateY(0px);
 	}
 }
 
