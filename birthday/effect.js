@@ -7,8 +7,17 @@ $("document").ready(function () {
 
   function getBalloonLayout() {
     var width = $(window).width();
-    var balloonWidth = width < 480 ? 52 : width < 768 ? 72 : 100;
-    var spacing = width < 480 ? 18 : width < 768 ? 28 : 68;
+    var availableWidth = Math.max(220, width - 26);
+    var balloonWidth = width < 480 ? 34 : width < 768 ? 52 : 100;
+    var spacing = width < 480 ? 10 : width < 768 ? 18 : 68;
+
+    while (balloonWidth * 7 + spacing * 6 > availableWidth) {
+      balloonWidth = Math.max(24, balloonWidth - 2);
+      if (width < 480) {
+        spacing = Math.max(6, spacing - 1);
+      }
+    }
+
     var totalWidth = balloonWidth * 7 + spacing * 6;
     var startLeft = (width - totalWidth) / 2;
 
@@ -96,14 +105,15 @@ $("document").ready(function () {
   function getCenteredBalloonPosition() {
     var width = $(window).width();
     var height = $(window).height();
+    var clusterWidth = Math.min(width - 60, 280);
     var centerX = width / 2;
-    var travelRange = Math.min(width * 0.55, 420);
-    var travelHeight = Math.min(height * 0.45, 260);
+    var travelRange = Math.max(80, clusterWidth);
+    var travelHeight = Math.min(height * 0.4, 220);
     var randleft = centerX - travelRange / 2 + Math.random() * travelRange;
     var randtop = 30 + Math.random() * travelHeight;
 
     return {
-      left: Math.max(10, Math.min(randleft, width - 120)),
+      left: Math.max(12, Math.min(randleft, width - 90)),
       bottom: randtop,
     };
   }
