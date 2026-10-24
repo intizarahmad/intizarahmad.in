@@ -5,18 +5,30 @@ $(window).load(function () {
 $("document").ready(function () {
   var vw;
 
-  function setBalloonCluster() {
+  function getBalloonLayout() {
     var width = $(window).width();
-    var spacing = width < 480 ? 38 : width < 768 ? 52 : 68;
-    var startLeft = Math.max(18, (width - (spacing * 6 + 80)) / 2);
+    var balloonWidth = width < 480 ? 52 : width < 768 ? 72 : 100;
+    var spacing = width < 480 ? 18 : width < 768 ? 28 : 68;
+    var totalWidth = balloonWidth * 7 + spacing * 6;
+    var startLeft = (width - totalWidth) / 2;
+
+    return {
+      balloonWidth: balloonWidth,
+      spacing: spacing,
+      startLeft: startLeft,
+    };
+  }
+
+  function setBalloonCluster() {
+    var layout = getBalloonLayout();
     var positions = [
-      startLeft,
-      startLeft + spacing,
-      startLeft + spacing * 2,
-      startLeft + spacing * 3,
-      startLeft + spacing * 4,
-      startLeft + spacing * 5,
-      startLeft + spacing * 6,
+      layout.startLeft,
+      layout.startLeft + layout.spacing,
+      layout.startLeft + layout.spacing * 2,
+      layout.startLeft + layout.spacing * 3,
+      layout.startLeft + layout.spacing * 4,
+      layout.startLeft + layout.spacing * 5,
+      layout.startLeft + layout.spacing * 6,
     ];
 
     $("#b1,#b2,#b3,#b4,#b5,#b6,#b7").stop();
@@ -198,9 +210,7 @@ $("document").ready(function () {
   });
 
   $("#wish_message").click(function () {
-    var width = $(window).width();
-    var spacing = width < 480 ? 38 : width < 768 ? 52 : 68;
-    var startLeft = Math.max(18, (width - (spacing * 6 + 80)) / 2);
+    var layout = getBalloonLayout();
 
     $("#b1,#b2,#b3,#b4,#b5,#b6,#b7").stop();
     $("#b1").attr("id", "b11");
@@ -212,13 +222,13 @@ $("document").ready(function () {
     $("#b7").attr("id", "b77");
 
     [
-      ["#b11", startLeft],
-      ["#b22", startLeft + spacing],
-      ["#b33", startLeft + spacing * 2],
-      ["#b44", startLeft + spacing * 3],
-      ["#b55", startLeft + spacing * 4],
-      ["#b66", startLeft + spacing * 5],
-      ["#b77", startLeft + spacing * 6],
+      ["#b11", layout.startLeft],
+      ["#b22", layout.startLeft + layout.spacing],
+      ["#b33", layout.startLeft + layout.spacing * 2],
+      ["#b44", layout.startLeft + layout.spacing * 3],
+      ["#b55", layout.startLeft + layout.spacing * 4],
+      ["#b66", layout.startLeft + layout.spacing * 5],
+      ["#b77", layout.startLeft + layout.spacing * 6],
     ].forEach(function (pair) {
       $(pair[0]).animate({ top: 240, left: pair[1] }, 500);
     });
