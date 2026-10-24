@@ -221,27 +221,28 @@ $("document").ready(function () {
     var i;
 
     function msgLoop(i) {
-      $("p:nth-child(" + i + ")")
-        .fadeOut("slow")
-        .delay(800)
+      var totalMessages = $(".message p").length;
+
+      if (i >= totalMessages) {
+        $(".cake").fadeIn("fast");
+        return;
+      }
+
+      var $current = $(".message p:nth-child(" + (i + 1) + ")");
+
+      $current
+        .fadeIn("slow")
+        .delay(1200)
         .promise()
         .done(function () {
-          i = i + 1;
-          $("p:nth-child(" + i + ")")
-            .fadeIn("slow")
-            .delay(1000);
-          if (i == 50) {
-            $("p:nth-child(49)")
-              .fadeOut("slow")
-              .promise()
-              .done(function () {
-                $(".cake").fadeIn("fast");
-              });
-          } else {
-            msgLoop(i);
+          if (i + 1 >= totalMessages) {
+            $(".cake").fadeIn("fast");
+            return;
           }
+
+          $current.fadeOut("slow");
+          msgLoop(i + 1);
         });
-      // body...
     }
 
     msgLoop(0);
