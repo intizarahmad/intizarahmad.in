@@ -93,69 +93,91 @@ $("document").ready(function () {
       });
   });
 
+  function getCenteredBalloonPosition() {
+    var width = $(window).width();
+    var height = $(window).height();
+    var centerX = width / 2;
+    var travelRange = Math.min(width * 0.55, 420);
+    var travelHeight = Math.min(height * 0.45, 260);
+    var randleft = centerX - travelRange / 2 + Math.random() * travelRange;
+    var randtop = 30 + Math.random() * travelHeight;
+
+    return {
+      left: Math.max(10, Math.min(randleft, width - 120)),
+      bottom: randtop,
+    };
+  }
+
   function loopOne() {
-    var maxLeft = $(window).width() - 120;
-    var maxBottom = Math.min($(window).height() * 0.7, 500);
-    var randleft = 10 + Math.random() * Math.max(0, maxLeft);
-    var randtop = 30 + Math.random() * Math.max(0, maxBottom);
-    $("#b1").animate({ left: randleft, bottom: randtop }, 10000, function () {
-      loopOne();
-    });
+    var next = getCenteredBalloonPosition();
+    $("#b1").animate(
+      { left: next.left, bottom: next.bottom },
+      10000,
+      function () {
+        loopOne();
+      },
+    );
   }
   function loopTwo() {
-    var maxLeft = $(window).width() - 120;
-    var maxBottom = Math.min($(window).height() * 0.7, 500);
-    var randleft = 10 + Math.random() * Math.max(0, maxLeft);
-    var randtop = 30 + Math.random() * Math.max(0, maxBottom);
-    $("#b2").animate({ left: randleft, bottom: randtop }, 10000, function () {
-      loopTwo();
-    });
+    var next = getCenteredBalloonPosition();
+    $("#b2").animate(
+      { left: next.left, bottom: next.bottom },
+      10000,
+      function () {
+        loopTwo();
+      },
+    );
   }
   function loopThree() {
-    var maxLeft = $(window).width() - 120;
-    var maxBottom = Math.min($(window).height() * 0.7, 500);
-    var randleft = 10 + Math.random() * Math.max(0, maxLeft);
-    var randtop = 30 + Math.random() * Math.max(0, maxBottom);
-    $("#b3").animate({ left: randleft, bottom: randtop }, 10000, function () {
-      loopThree();
-    });
+    var next = getCenteredBalloonPosition();
+    $("#b3").animate(
+      { left: next.left, bottom: next.bottom },
+      10000,
+      function () {
+        loopThree();
+      },
+    );
   }
   function loopFour() {
-    var maxLeft = $(window).width() - 120;
-    var maxBottom = Math.min($(window).height() * 0.7, 500);
-    var randleft = 10 + Math.random() * Math.max(0, maxLeft);
-    var randtop = 30 + Math.random() * Math.max(0, maxBottom);
-    $("#b4").animate({ left: randleft, bottom: randtop }, 10000, function () {
-      loopFour();
-    });
+    var next = getCenteredBalloonPosition();
+    $("#b4").animate(
+      { left: next.left, bottom: next.bottom },
+      10000,
+      function () {
+        loopFour();
+      },
+    );
   }
   function loopFive() {
-    var maxLeft = $(window).width() - 120;
-    var maxBottom = Math.min($(window).height() * 0.7, 500);
-    var randleft = 10 + Math.random() * Math.max(0, maxLeft);
-    var randtop = 30 + Math.random() * Math.max(0, maxBottom);
-    $("#b5").animate({ left: randleft, bottom: randtop }, 10000, function () {
-      loopFive();
-    });
+    var next = getCenteredBalloonPosition();
+    $("#b5").animate(
+      { left: next.left, bottom: next.bottom },
+      10000,
+      function () {
+        loopFive();
+      },
+    );
   }
 
   function loopSix() {
-    var maxLeft = $(window).width() - 120;
-    var maxBottom = Math.min($(window).height() * 0.7, 500);
-    var randleft = 10 + Math.random() * Math.max(0, maxLeft);
-    var randtop = 30 + Math.random() * Math.max(0, maxBottom);
-    $("#b6").animate({ left: randleft, bottom: randtop }, 10000, function () {
-      loopSix();
-    });
+    var next = getCenteredBalloonPosition();
+    $("#b6").animate(
+      { left: next.left, bottom: next.bottom },
+      10000,
+      function () {
+        loopSix();
+      },
+    );
   }
   function loopSeven() {
-    var maxLeft = $(window).width() - 120;
-    var maxBottom = Math.min($(window).height() * 0.7, 500);
-    var randleft = 10 + Math.random() * Math.max(0, maxLeft);
-    var randtop = 30 + Math.random() * Math.max(0, maxBottom);
-    $("#b7").animate({ left: randleft, bottom: randtop }, 10000, function () {
-      loopSeven();
-    });
+    var next = getCenteredBalloonPosition();
+    $("#b7").animate(
+      { left: next.left, bottom: next.bottom },
+      10000,
+      function () {
+        loopSeven();
+      },
+    );
   }
 
   $("#balloons_flying").click(function () {
