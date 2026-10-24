@@ -45,7 +45,7 @@ $("document").ready(function () {
     $("body").addClass("peach");
     $(this)
       .fadeOut("slow")
-      .delay(5000)
+      .delay(3000)
       .promise()
       .done(function () {
         $("#bannar_coming").fadeIn("slow");
@@ -63,7 +63,7 @@ $("document").ready(function () {
     $("body").addClass("peach-after");
     $(this)
       .fadeOut("slow")
-      .delay(6000)
+      .delay(3000)
       .promise()
       .done(function () {
         $("#bannar_coming").fadeIn("slow");
@@ -74,7 +74,7 @@ $("document").ready(function () {
     $(".bannar").addClass("bannar-come");
     $(this)
       .fadeOut("slow")
-      .delay(6000)
+      .delay(3000)
       .promise()
       .done(function () {
         $("#balloons_flying").fadeIn("slow");
